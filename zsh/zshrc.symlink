@@ -1,31 +1,38 @@
-if [[ -a ~/.secrets ]]
-then
-  source ~/.secrets
-fi
+export ZSH=/Users/benjamincarothers/.oh-my-zsh
 
-export ZSH=$HOME/Dotfiles
+declare -a paths 
 
-typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+paths=(
+  "/usr/local/sbin"
+  "/Library/TeX/Distributions/Programs/texbin"
+  "/Applications/Postgres.app/Contents/Versions/latest/bin"
+)
 
-for file in ${(M)config_files:#*/path.zsh}
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+for dir in ${(k)paths[@]}
 do
-  source $file
+  if [ -d ${dir} ]; then
+    PATH="${dir}:$PATH"
+  fi
 done
 
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
+unset dirs_to_prepend
 
-autoload -U compinit
-compinit
+export PATH
 
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
-unset config_files
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export NVM_DIR="/Users/benjamincarothers/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+. ~/.z.sh
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH=/usr/local/bin:$PATH
+ZSH_THEME="robbyrussell"
+HYPHEN_INSENSITIVE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="mm/dd/yyyy"
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh 
+source ~/Dotfiles/zsh/prompt.zsh

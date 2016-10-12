@@ -1,7 +1,4 @@
-# http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
-
 autoload colors && colors
-export battery=$HOME/Dotfiles/bin/battery
 
 if (( $+commands[git] ))
 then
@@ -66,9 +63,4 @@ function venv() {
     fi
 }
 
-function battery_charge {
-    echo `$battery` 2>/dev/null
-}
-
 PROMPT=$'\nin $(directory_name)$(git_dirty)$(venv)$(need_push)\n› '
-#RPROMPT='$(battery_charge)'
