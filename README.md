@@ -1,7 +1,40 @@
-# My Dotfiles
+# Bringing a Mac to life
 
-This repo is a collection of all of the configuration files I need to get
-a development machine up and running.
+## Shell
 
-I've tried to keep everything to a minimum, but that's a work in progress.
+```
+Xcode
+Iterm2
+```
 
+## Text Editing
+
+```
+Vim
+Atom
+```
+
+## Development
+
+### Python
+
+```
+Pyenv
+Pyenv-virtualenv
+```
+
+### JS & Node
+
+```
+yarn
+nvm
+npm
+```
+
+## Tools
+
+```
+Resty
+Docker
+Vagrant
+```
