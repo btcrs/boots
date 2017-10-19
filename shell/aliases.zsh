@@ -1,0 +1,6 @@
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias reloadcli="source $HOME/.zshrc"
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias weather="curl -4 http://wttr.in"
+alias localip="ipconfig getifaddr en0"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

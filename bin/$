@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-echo 'Quit pasting commands from the internet, you lazy bum.'
-"$@"

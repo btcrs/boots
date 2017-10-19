@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+source "$HOME/.shell/.exports"
+source "$HOME/.shell/.aliases"
+
+if [[ -f "$HOME/.shell_env_local" ]]; then
+  source "$HOME/.shell_env_local"
+fi

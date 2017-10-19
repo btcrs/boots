@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/bencarothers/Downloads/swift/216.119.87.150/swift'
-let g:netrw_dirhist_2='/Users/bencarothers/Downloads/swift/216.119.87.150/swift/includes'
-let g:netrw_dirhist_3='ftp://ftp.americanairambulance.com@intensiv//'
-let g:netrw_dirhist_4='ftp://ftp.americanairambulance.com@intensi0//'
-let g:netrw_dirhist_5='/Users/bencarothers/.vim'

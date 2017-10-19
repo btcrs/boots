@@ -1,0 +1,7 @@
+[user]
+	name = Ben
+	email = ben@wevolver.com
+[commit]
+	template = ~/.gitmessage
+[http]
+	postBuffer = 524288000
